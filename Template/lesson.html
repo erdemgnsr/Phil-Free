@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<main id="main" class="main-page">
+
+    <!--==========================
+      Speaker Details Section
+    ============================-->
+    <section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Lesson Details</h2>
+          <p>{{lesson.title}}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/media/{{lesson.speaker_image}}" alt="{{lesson.speaker}}" class="img-fluid">
+          </div>
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>{{lesson.speaker}}</h2>
+              
+              <p>{{lesson.content|safe}}</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+{% endblock content %}
+
+  
